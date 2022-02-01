@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/food.css">
+    <title>the point</title>
+</head>
+<body>
+<!--SPRITE-->
+<svg style="display: none;">
+    <symbol id="like" viewBox="0 0 512 512">
+        <g>
+            <path  clip-rule="evenodd" d="M109.057 77.0774C64.0176 90.6447 27.4864 128.737 23.4054 184.058C21.848 205.17 30.6355 228.687 46.8978 253.392C63.0972 278.001 86.2238 303.049 112.068 326.983C163.753 374.849 225.295 417.349 261.212 442.017C265 444.619 265.737 449.502 262.858 452.925C259.98 456.348 254.576 457.014 250.788 454.413C214.922 429.779 152.424 386.649 99.7377 337.857C73.3956 313.461 49.2533 287.423 32.0917 261.352C14.993 235.376 4.3275 208.618 6.21567 183.023C10.7486 121.576 51.7426 77.9311 103.609 62.3072C155.558 46.6588 217.368 59.4262 262.618 108.498C265.663 111.8 265.169 116.709 261.515 119.461C257.86 122.214 252.428 121.768 249.383 118.465C208.493 74.1218 154.015 63.5347 109.057 77.0774Z" fill="black"/>
+            <path  clip-rule="evenodd" d="M402.943 77.0774C447.982 90.6447 484.514 128.737 488.595 184.058C490.152 205.17 481.364 228.687 465.102 253.392C448.903 278.001 425.776 303.049 399.932 326.983C348.247 374.849 286.705 417.349 250.788 442.017C247 444.619 246.263 449.502 249.142 452.925C252.02 456.348 257.424 457.014 261.212 454.413C297.078 429.779 359.576 386.649 412.262 337.857C438.604 313.461 462.747 287.423 479.908 261.352C497.007 235.376 507.673 208.618 505.784 183.023C501.251 121.576 460.257 77.9311 408.391 62.3072C356.442 46.6588 294.632 59.4262 249.382 108.498C246.337 111.8 246.831 116.709 250.485 119.461C254.14 122.214 259.572 121.768 262.617 118.465C303.507 74.1218 357.985 63.5347 402.943 77.0774Z" fill="black"/>
+
+        </g>
+    </symbol>
+    <symbol id="com" viewBox="0 0 64 64">
+        <g>
+            <path clip-rule="evenodd" d="M5 16C5 13.7909 6.79086 12 9 12H55.1166C57.3257 12 59.1166 13.7909 59.1166 16V42.0014C59.1166 44.2106 57.3257 46.0014 55.1166 46.0014H45.0033C44.3678 46.0014 43.7701 46.3034 43.3932 46.815L36.907 55.6176C34.6165 58.7262 29.6868 57.1061 29.6868 53.2449V48.0014C29.6868 46.8968 28.7914 46.0014 27.6868 46.0014H9C6.79086 46.0014 5 44.2106 5 42.0014V16ZM9 14C7.89543 14 7 14.8954 7 16V42.0014C7 43.106 7.89543 44.0014 9 44.0014H27.6868C29.8959 44.0014 31.6868 45.7923 31.6868 48.0014V53.2449C31.6868 55.1755 34.1517 55.9855 35.2969 54.4313L41.7831 45.6286C42.537 44.6054 43.7323 44.0014 45.0033 44.0014H55.1166C56.2212 44.0014 57.1166 43.106 57.1166 42.0014V16C57.1166 14.8954 56.2212 14 55.1166 14H9Z" fill="black"/>
+            <path clip-rule="evenodd" d="M29.9027 17.9268C30.4317 18.0855 30.7319 18.643 30.5732 19.172L24.804 38.4028C24.6453 38.9318 24.0878 39.2319 23.5588 39.0732C23.0298 38.9145 22.7296 38.3571 22.8883 37.8281L28.6576 18.5973C28.8163 18.0683 29.3737 17.7681 29.9027 17.9268Z" fill="black"/>
+            <path clip-rule="evenodd" d="M41.4412 17.9268C41.9702 18.0855 42.2704 18.643 42.1117 19.172L36.3424 38.4028C36.1837 38.9318 35.6263 39.2319 35.0973 39.0732C34.5683 38.9145 34.2681 38.3571 34.4268 37.8281L40.196 18.5973C40.3547 18.0683 40.9122 17.7681 41.4412 17.9268Z" fill="black"/>
+            <path clip-rule="evenodd" d="M19 24.6539C19 24.1016 19.4477 23.6539 20 23.6539H45C45.5523 23.6539 46 24.1016 46 24.6539C46 25.2062 45.5523 25.6539 45 25.6539H20C19.4477 25.6539 19 25.2062 19 24.6539Z" fill="black"/>
+            <path clip-rule="evenodd" d="M19 33.3077C19 32.7554 19.4477 32.3077 20 32.3077H45C45.5523 32.3077 46 32.7554 46 33.3077C46 33.86 45.5523 34.3077 45 34.3077H20C19.4477 34.3077 19 33.86 19 33.3077Z" fill="black"/>
+        </g>
+    </symbol>
+    <symbol id="instagram" viewBox="0 0 512 512">
+        <g>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M335 107H177C138.34 107 107 138.34 107 177V335C107 373.66 138.34 405 177 405H335C373.66 405 405 373.66 405 335V177C405 138.34 373.66 107 335 107ZM177 87C127.294 87 87 127.294 87 177V335C87 384.706 127.294 425 177 425H335C384.706 425 425 384.706 425 335V177C425 127.294 384.706 87 335 87H177Z" fill="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M256 310C285.823 310 310 285.823 310 256C310 226.177 285.823 202 256 202C226.177 202 202 226.177 202 256C202 285.823 226.177 310 256 310ZM256 327C295.212 327 327 295.212 327 256C327 216.788 295.212 185 256 185C216.788 185 185 216.788 185 256C185 295.212 216.788 327 256 327Z" fill="black"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M333 185C346.807 185 358 173.807 358 160C358 146.193 346.807 135 333 135C319.193 135 308 146.193 308 160C308 173.807 319.193 185 333 185Z" fill="black"/>
+        </g>
+    </symbol>
+</svg>
+
+<header class="header">
+    <h1 class="header__title">
+        <a href="../index.html" class="header__link">the point</a>
+    </h1>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" href="traveling.html">traveling</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="design.html">design</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="nature.html">nature</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="food.html">food</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">   
+    <div class="container">
+            <div class="block">
+                <div class="block__item">
+                    <a class="block__title" href="page5.html">
+                        Зимняя сказка: Циллертальские Альпы
+                    </a>
+                    <div class="block__date">
+                        Январь 18, 2022 
+                    </div>
+                    <a class="block__photo-link" href="page5.html">
+                        <img class="block__img" src="img/p5.PNG" alt="" width="">
+                    </a>
+                    <div class="block__text">
+                        Побывав однажды в Австрии в новогодний снежный период, вы точно оставите там навсегда свое сердце. Так случилось и со мной. Я будто попала в одну из сказок своего детства, где каждая елочка была в снегу, кружевные снежинки падали на землю, и казалось, что вот-вот на горизонте появятся сани Санта-Клауса. Именно такая картинка появляется перед глазами человека, оказавшегося в этом удивительном месте.
+                    </div>
+                    <a class="block__link" href="page5.html">Читать далее</a>
+                    <div class="social">
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#like'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#com'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="https://www.instagram.com" target="blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#instagram'></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block__item">
+                    <a class="block__title" href="page6.html">
+                        Сингапур, Бали, Ломбок и острова Гили: заметка о путешествии десятилетней давности
+                    </a>
+                    <div class="block__date">
+                        Январь 18, 2022 
+                    </div>
+                    <a class="block__photo-link" href="page6.html">
+                        <img class="block__img" src="img/p6.PNG" alt="" width="">
+                    </a>
+                    <div class="block__text">
+                        Сингапур, Бали, Ломбок и далекие, затерянные в океане острова Гили… 
+                        это была наша первая Азия, и это было наше первое самостоятельное далекое путешествие.
+                        Сингапур, Бали, Ломбок и далекие, затерянные в океане острова Гили… 
+                        это была наша первая Азия, и это было наше первое самостоятельное далекое путешествие.
+                    </div>
+                    <a class="block__link" href="page6.html">Читать далее</a>
+                    <div class="social">
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#like'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#com'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="https://www.instagram.com" target="blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#instagram'></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block__item">
+                    <a class="block__title" href="page7.html">
+                        Сингапур, Бали, Ломбок и острова Гили: заметка о путешествии десятилетней давности
+                    </a>
+                    <div class="block__date">
+                        Январь 18, 2022 
+                    </div>
+                    <a class="block__photo-link" href="page7.html">
+                        <img class="block__img" src="img/p7.PNG" alt="" width="">
+                    </a>
+                    <div class="block__text">
+                        Сингапур, Бали, Ломбок и далекие, затерянные в океане острова Гили… 
+                        это была наша первая Азия, и это было наше первое самостоятельное далекое путешествие.
+                        Сингапур, Бали, Ломбок и далекие, затерянные в океане острова Гили… 
+                        это была наша первая Азия, и это было наше первое самостоятельное далекое путешествие.
+                    </div>
+                    <a class="block__link" href="page7.html">Читать далее</a>
+                    <div class="social">
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#like'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#com'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="https://www.instagram.com" target="blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#instagram'></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="block__item">
+                    <a class="block__title" href="page8.html">
+                        Сингапур, Бали, Ломбок и острова Гили: заметка о путешествии десятилетней давности
+                    </a>
+                    <div class="block__date">
+                        Январь 18, 2022 
+                    </div>
+                    <a class="block__photo-link" href="page8.html">
+                        <img class="block__img" src="img/p8.jpg" alt="" width="">
+                    </a>
+                    <div class="block__text">
+                        Сингапур, Бали, Ломбок и далекие, затерянные в океане острова Гили… 
+                        это была наша первая Азия, и это было наше первое самостоятельное далекое путешествие.
+                        Сингапур, Бали, Ломбок и далекие, затерянные в океане острова Гили… 
+                        это была наша первая Азия, и это было наше первое самостоятельное далекое путешествие.
+                    </div>
+                    <a class="block__link" href="page8.html">Читать далее</a>
+                    <div class="social">
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#like'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="" >
+                            <svg class="social__icon">
+                                <use xlink:href='#com'></use>
+                            </svg>
+                        </a>
+                        <a class="social__item" href="https://www.instagram.com" target="blank">
+                            <svg class="social__icon">
+                                <use xlink:href='#instagram'></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</main>
+
+    
+</body>
+</html>
